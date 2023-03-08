@@ -1,34 +1,17 @@
-import FormMatrixA from "./components/formMatrixA";
-import OutputMatrix from "./components/outputMatrix";
-import FormMatrixB from "./components/formMatrixB";
+import Multiply from "./pages/multiply";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import GaussJordan from "./pages/gauss-jordan";
 
 function App() {
     return (
-        <div className="App">
-            <div
-                style={{
-                    display: "grid",
-                    placeItems: "center",
-                }}
-            >
-                <FormMatrixA />
-                <FormMatrixB />
-            </div>
-
-            <div
-                style={{
-                    borderRadius: "25px",
-                    margin: "10px",
-                    padding: "10px",
-                    backgroundColor: "gray",
-                    display: "grid",
-                    placeItems: "center",
-                }}
-            >
-                <OutputMatrix />
-            </div>
-            
-        </div>
+                <div className="App">
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<GaussJordan/>}></Route>
+            </Routes>
+        </BrowserRouter>
+                </div>
     );
 }
 

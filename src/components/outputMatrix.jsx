@@ -13,6 +13,7 @@ function OutputMatrix() {
         matrixes.matrix_R.length,
         matrixes.matrix_R.reduce((x, y) => Math.max(x, y.length), 0),
     ];
+    
     const rowMax = dimensions[0];
     const columnMax = dimensions[1];
 
